@@ -12,8 +12,8 @@ from load_qwen import load_qwen_model
 model, tokenizer = load_qwen_model()
 
 # Load test prompts from JSON file
-with open('test_prompts.json', 'r') as f:
-    test_prompts = json.load(f)
+with open('train_prompts.json', 'r') as f:
+    train_prompts = json.load(f)
 
 
 #SETUP THE EXPERIMENT
@@ -61,7 +61,7 @@ else:
     # Store all generated texts
     generated_texts = []
 
-    for prompt in test_prompts:
+    for prompt in train_prompts:
 
         inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 
@@ -184,7 +184,7 @@ print("Running forward pass with PCA intervention")
 # Store all PCA-intervened generated texts
 generated_texts_pca = []
 
-for prompt in test_prompts:
+for prompt in train_prompts:
 
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 

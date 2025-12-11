@@ -13,8 +13,8 @@ layer_19_mlp = model.model.layers[19].mlp
 pca_comps = 0
 
 # Load test prompts from JSON file
-with open('test_prompts.json', 'r') as f:
-    test_prompts = json.load(f)
+with open('train_prompts.json', 'r') as f:
+    train_prompts = json.load(f)
 
 # # Storage for MLP inputs and outputs - using lists to accumulate data
 # mlp_activations = {
@@ -39,7 +39,7 @@ with open('test_prompts.json', 'r') as f:
 # # Store all generated texts
 # generated_texts = []
 
-# for prompt in test_prompts:
+# for prompt in train_prompts:
 
 #     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 
@@ -141,7 +141,7 @@ print("Running forward pass with PCA intervention")
 # Store all PCA-intervened generated texts
 generated_texts_pca = []
 
-for prompt in test_prompts:
+for prompt in train_prompts:
 
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 
