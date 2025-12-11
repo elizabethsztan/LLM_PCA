@@ -11,9 +11,12 @@ from load_qwen import load_qwen_model
 #load the model
 model, tokenizer = load_qwen_model()
 
-# Load test prompts from JSON file
+# Load prompts from JSON file
 with open('train_prompts.json', 'r') as f:
     train_prompts = json.load(f)
+
+with open('test_prompts.json', 'r') as f:
+    test_prompts = json.load(f)
 
 
 #SETUP THE EXPERIMENT
@@ -80,6 +83,7 @@ else:
             'generated_text': generated_text
         })
 
+
     # Remove the hook when done
     for handle in handles:
         handle.remove()
@@ -90,6 +94,33 @@ else:
         json.dump(generated_texts, f, indent=2)
 
     print(f"Saved {len(generated_texts)} baseline outputs to baseline_outputs.json")
+
+    generated_texts_test = []
+    #run a baseline test for the test prompts too
+    for prompt in test_prompts:
+
+        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+
+        with torch.no_grad():
+            generated_ids = model.generate(
+                **inputs,
+                max_new_tokens=50,
+                # temperature=0.0,
+                do_sample=False,
+                pad_token_id=tokenizer.eos_token_id
+            )
+
+        generated_text_test = tokenizer.decode(generated_ids[0], skip_special_tokens=True)
+        generated_texts_test.append({
+            'prompt': prompt,
+            'generated_text': generated_text_test
+        })
+
+            # Save generated texts to JSON file
+    with open(f'{results_location}/test_baseline_outputs.json', 'w') as f:
+        json.dump(generated_texts_test, f, indent=2)
+
+    print(f"Saved {len(generated_texts_test)} test baseline outputs to test_baseline_outputs.json")
 
 
     # Save activations for each layer separately
@@ -183,6 +214,7 @@ print("Running forward pass with PCA intervention")
 
 # Store all PCA-intervened generated texts
 generated_texts_pca = []
+generated_texts_pca_test = []
 
 for prompt in train_prompts:
 
@@ -204,14 +236,41 @@ for prompt in train_prompts:
         'generated_text': generated_text_pca
     })
 
+
+for prompt in test_prompts:
+
+    inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+
+    with torch.no_grad():
+        generated_ids_pca = model.generate(
+            **inputs,
+            max_new_tokens=50,
+            # temperature=0.0,
+            do_sample=False,
+            pad_token_id=tokenizer.eos_token_id,
+            use_cache=False  # Disable KV caching so hook is called every forward pass
+        )
+
+    generated_text_pca_test = tokenizer.decode(generated_ids_pca[0], skip_special_tokens=True)
+    generated_texts_pca_test.append({
+        'prompt': prompt,
+        'generated_text': generated_text_pca_test
+    })
+
 # Remove all intervention hooks when done
 for handle in intervention_handles:
     handle.remove()
 
 # Save PCA-intervened generated texts to JSON file
 layers_str = '_'.join(map(str, layers))
-output_filename = f'{results_location}/pca_intervention_outputs_{pca_comps}comps_layers_{layers_str}.json'
-with open(output_filename, 'w') as f:
+output_filename_train = f'{results_location}/pca_intervention_outputs_{pca_comps}comps_layers_{layers_str}.json'
+with open(output_filename_train, 'w') as f:
     json.dump(generated_texts_pca, f, indent=2)
 
-print(f"Saved {len(generated_texts_pca)} PCA intervention outputs to {output_filename}")
+print(f"Saved {len(generated_texts_pca)} PCA intervention outputs (train set) to {output_filename_train}")
+
+output_filename_test = f'{results_location}/pca_intervention_outputs_{pca_comps}comps_layers_{layers_str}_test.json'
+with open(output_filename_test, 'w') as f:
+    json.dump(generated_texts_pca_test, f, indent=2)
+
+print(f"Saved {len(generated_texts_pca_test)} PCA intervention outputs (test set) to {output_filename_test}")
