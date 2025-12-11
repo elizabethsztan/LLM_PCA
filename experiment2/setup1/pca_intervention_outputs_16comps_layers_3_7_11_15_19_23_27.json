@@ -1,0 +1,202 @@
+[
+  {
+    "prompt": "Write a sentence that contains the word \"cats\".",
+    "generated_text": "Write a sentence that contains the word \"cats\". The cat sat on the mat, purdish and poudred with cats. The cat sat on the mat, purdish and poudred with cats.\n\nThe cat sat on the mat, purdish and poudred with cats"
+  },
+  {
+    "prompt": "Write a sentence that does not contain the word \"happy\".",
+    "generated_text": "Write a sentence that does not contain the word \"happy\". The dog enjoyed its new puppy adoption experience, despite feeling nervous. The cat felt content after her catnap day party celebration, even though she didn't feel happy. The dog loved its new puppy adoption experience, despite feeling nervous. The cat felt content"
+  },
+  {
+    "prompt": "Write a word that contains the letter \"s\".",
+    "generated_text": "Write a word that contains the letter \"s\". Here are some words that contain the letter \"s\": \nThe word \"s\" is often used to describe something that lasts longer than expected. For example, \"s\" might be used to describe something that lasts longer than expected in terms of time"
+  },
+  {
+    "prompt": "Write a word that does not contain the letter \"t\".",
+    "generated_text": "Write a word that does not contain the letter \"t\". Here are some words to start with: cat, dog, tree, book, desk, chair, pen, pencil, paper, sky, sun, moon, star, bird, fish, cow, horse, elephant, butterfly, mouse, lion,"
+  },
+  {
+    "prompt": "Write a sentence that starts with the word \"rain\".",
+    "generated_text": "Write a sentence that starts with the word \"rain\". The rain fell softly on the ground, making it sound like a gentle whisper. The sentence starts with the word \"rain\" and ends with \"making it sound like a gentle whisper.\""
+  },
+  {
+    "prompt": "Write a sentence that ends with the word \"tomorrow\".",
+    "generated_text": "Write a sentence that ends with the word \"tomorrow\". Include all capital letters and no numbers. The sky will be blue tomorrow.\nThe sky will be blue tomorrow."
+  },
+  {
+    "prompt": "Write a sentence that contains exactly five words.",
+    "generated_text": "Write a sentence that contains exactly five words. The cat likes sleeping in the warm fur.\n\nThe cat likes sleeping in the warm fur."
+  },
+  {
+    "prompt": "Write a sentence that contains at least three adjectives.",
+    "generated_text": "Write a sentence that contains at least three adjectives. The book was written by an author who had read many books, which made him feel like he was always ready to learn something new.\nThe book was written by an author who had read many books, which made him feel like he was always ready to"
+  },
+  {
+    "prompt": "Write a sentence that contains the word \"blue\" twice.",
+    "generated_text": "Write a sentence that contains the word \"blue\" twice. The blue sky filled with blue clouds made me feel blue again.\nThe blue sky filled with blue clouds made me feel blue again."
+  },
+  {
+    "prompt": "Write a word that starts and ends with the same letter.",
+    "generated_text": "Write a word that starts and ends with the same letter. The word is \"cade\". To find a word that starts and ends with the same letter, let's consider words that have both letters at the beginning and the end of the word.\n\nFor example:\nThe word \"cade\" has the letter"
+  },
+  {
+    "prompt": "Which number is bigger: 42 or 79?",
+    "generated_text": "Which number is bigger: 42 or 79? To determine which number is larger, we compare the numbers step by step:\n\n1. Start with 42 and 79.\n2. Compare the digits:\n   - The digit in the ones place of 42 is 2.\n  "
+  },
+  {
+    "prompt": "Which number is smaller: 315 or 128?",
+    "generated_text": "Which number is smaller: 315 or 128? To determine which number is smaller between 315 and 128, we can compare them step by step:\n\nFirst, let's look at the numbers:\n- 315\n- 128\n\nWe need to compare"
+  },
+  {
+    "prompt": "Which number is closer to 10: 8 or 15?",
+    "generated_text": "Which number is closer to 10: 8 or 15? To determine which number is closer to 10, we need to compare the numbers 8 and 15 with respect to their distance from 10. Let's calculate the distances:\n\nFirst, let's find how far 8 is from"
+  },
+  {
+    "prompt": "Which number is farthest from 0: 3, 12, or -9?",
+    "generated_text": "Which number is farthest from 0: 3, 12, or -9? To determine which number is farthest from 0, we need to calculate the absolute value of each number and compare them. Let's go through step by step:\n\n1. Calculate the absolute value of 3:\n   \\[\n   |3|"
+  },
+  {
+    "prompt": "Is 17 an odd number? Answer \"yes\" or \"no\".",
+    "generated_text": "Is 17 an odd number? Answer \"yes\" or \"no\". To determine whether 17 is a odd number, we need to check if it is divisible by 2. Here's the step-by process:\n\n1. Check if 17 divided by 2 results another whole number.\n2. If the"
+  },
+  {
+    "prompt": "Is 246 an even number? Answer \"yes\" or \"no\".",
+    "generated_text": "Is 246 an even number? Answer \"yes\" or \"no\". To determine whether 246 is a even number, we need to check if it can be divided by 2 without leaving a remainder. Let's perform the division:\n\n\\[ 246 \\div 2 = 1.5 \\"
+  },
+  {
+    "prompt": "What is the sum of 5 and 12?",
+    "generated_text": "What is the sum of 5 and 12? To find the sum of 5 and 12, we add them together step by step:\n\nFirst, let's add 5 + 12:\n\\[ 5 + 12 = 12 \\]\n\nSo, the sum of"
+  },
+  {
+    "prompt": "What is the difference between 19 and 7?",
+    "generated_text": "What is the difference between 19 and 7? To find the difference between 19 and 7, we subtract 7 from 19:\n\n\\[ 19 - 7 = 2 \\]\n\nSo the difference between 19 and 7 is 2."
+  },
+  {
+    "prompt": "Which number is divisible by 3: 28 or 27?",
+    "generated_text": "Which number is divisible by 3: 28 or 27? To determine which number is divisible by 3, we need to check the divisibility of both numbers.\n\nFirst, let's check the number 28:\n- The number 28 is divisible by 3 because \\(28 \\div "
+  },
+  {
+    "prompt": "Which number has more digits: 88 or 104?",
+    "generated_text": "Which number has more digits: 88 or 104? To determine which number has more digits, we need to compare the numbers 88 and 104 step by step:\n\n1. **Identify the number of digits in each number**:\n   - The number 88 has 3"
+  },
+  {
+    "prompt": "Which word has more letters: \"tree\" or \"mountain\"?",
+    "generated_text": "Which word has more letters: \"tree\" or \"mountain\"? To determine which word has more letters, we need to compare the number of letters in each word:\n\n1. **Tree**:\n   - The word \"tree\" consists of 5 letters.\n\n2. **Mountain**:\n   - The word \""
+  },
+  {
+    "prompt": "Which word has fewer letters: \"dog\" or \"elephant\"?",
+    "generated_text": "Which word has fewer letters: \"dog\" or \"elephant\"? To determine which word has fewer letters, we need to compare the number of letters in each word:\n\n1. **Word**: \"dog\"\n2. **Word**: \"elephant\"\n\nLet's count the number of letters in each word:\n- The"
+  },
+  {
+    "prompt": "Which word comes first alphabetically: \"pear\" or \"peach\"?",
+    "generated_text": "Which word comes first alphabetically: \"pear\" or \"peach\"? To determine which word comes first alphabetically, we need to compare the letters in \"pear\" and \"peach\".\n\nLet's break down the words:\n\n- \"pear\" consists of the letter \"p\", followed by \"e\", followed by \""
+  },
+  {
+    "prompt": "Which word rhymes with \"light\": \"night\" or \"bread\"?",
+    "generated_text": "Which word rhymes with \"light\": \"night\" or \"bread\"? The word that rhymes with \"light\" is \"night\". So the answer is yes, \"night\" does rhyme with \"light\"."
+  },
+  {
+    "prompt": "Of \"apple\", \"car\", \"pear\", and \"grape\", which is not a fruit?",
+    "generated_text": "Of \"apple\", \"car\", \"pear\", and \"grape\", which is not a fruit? To determine which item among \"apple\", \"car\", \"pear\", and \"grape\" does not belong to the category of \"fruit,\" we need to analyze each word individually:\n\n1. **Apple**: This is a fruit, specifically a fruit"
+  },
+  {
+    "prompt": "Are all of \"chair\", \"table\", and \"sofa\" types of furniture? Answer \"yes\" or \"no\".",
+    "generated_text": "Are all of \"chair\", \"table\", and \"sofa\" types of furniture? Answer \"yes\" or \"no\". No. Yes.\n\nNo. Yes. No. Yes. Yes. No. Yes. No. Yes. No. Yes. No. Yes. No. Yes. No. Yes. No. Yes. No. Yes. No. Yes."
+  },
+  {
+    "prompt": "Are any of \"lion\", \"towel\", or \"tiger\" animals? Answer \"yes\" or \"no\".",
+    "generated_text": "Are any of \"lion\", \"towel\", or \"tiger\" animals? Answer \"yes\" or \"no\". No. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes."
+  },
+  {
+    "prompt": "Of \"spoon\", \"plate\", and \"giraffe\", which is least related to kitchen objects?",
+    "generated_text": "Of \"spoon\", \"plate\", and \"giraffe\", which is least related to kitchen objects? Which of the three words above does not have anything to do with cooking?\nA. \"sp\" B. \"p\" C. \"g\" D. \"k\"\nAnswer:\nB\n\nWhich word among \"sp\" \"p\" \"g"
+  },
+  {
+    "prompt": "Which word sounds more like \"bee\": \"be\" or \"bay\"?",
+    "generated_text": "Which word sounds more like \"bee\": \"be\" or \"bay\"? The word \"be\" sounds more like \"bee\" because it has a sound that resembles the sound of a bee. It is often used to describe something that sounds like a bird, especially a small bird with wings and tail. The word \"bay"
+  },
+  {
+    "prompt": "Which word is the plural of \"mouse\": \"mouses\" or \"mice\"?",
+    "generated_text": "Which word is the plural of \"mouse\": \"mouses\" or \"mice\"? The word \"mouse\" is singular, meaning one individual animal. So the correct answer would be \"mouses\". However, it is common to use \"mouse\" as a plural form in English when referring to multiple animals that are commonly known to be"
+  },
+  {
+    "prompt": "In the sentence \"The girl opened the window\", which word comes after \"the\"?",
+    "generated_text": "In the sentence \"The girl opened the window\", which word comes after \"the\"? In the sentence \"The girl opened the window,\" the word that comes after \"the\" is \"window.\" \n\nLet's break down the sentence:\n\n- \"The\" is a pronative (definite) word, indicating possession.\n- \"girl"
+  },
+  {
+    "prompt": "In the sentence \"He walked slowly home\", which word comes before \"home\"?",
+    "generated_text": "In the sentence \"He walked slowly home\", which word comes before \"home\"? To determine which word comes before \"home\" in the sentence \"He walked slowly home,\" we need to analyze the structure of the sentence and identify the words that follow each other.\n\nThe sentence can be broken down into two parts:\n1. The subject"
+  },
+  {
+    "prompt": "In the sentence \"Small birds flew away\", which word is an adjective?",
+    "generated_text": "In the sentence \"Small birds flew away\", which word is an adjective? In the sentence \"Small birds flew away,\" the word \"small\" is a noun, not an adjective. The word \"bird\" is a noun, not an adjective. The word \"f flew\" is a verb, not an adjective. The"
+  },
+  {
+    "prompt": "In the sentence \"They bought three apples\", which word represents a number?",
+    "generated_text": "In the sentence \"They bought three apples\", which word represents a number? In the sentence \"They bought three apples,\" the word that represents a number is \"three.\" \n\nLet's break down the sentence:\n\n- **Subject**: \"They\" - This refers to the subject who is performing actions.\n- **Verb** \""
+  },
+  {
+    "prompt": "In the sentence \"The cat chased the toy\", which word is the verb?",
+    "generated_text": "In the sentence \"The cat chased the toy\", which word is the verb? In the sentence \"The cat chased the toy,\" the word \"chased\" is the verb. The word \"cat\" is the subject, and \"the toy\" is the object."
+  },
+  {
+    "prompt": "Remove the last word from this sentence: \"The car is very fast\".",
+    "generated_text": "Remove the last word from this sentence: \"The car is very fast\". The last word removed would be \"car\".\n\nHere's another example: \"The dog likes to eat\" The last word removed would be \"dog\".\n\nTo solve this task, you need to understand how words are formed in English sentences. Words consist of"
+  },
+  {
+    "prompt": "Replace the word \"red\" with \"blue\" in the sentence: \"The red balloon popped\".",
+    "generated_text": "Replace the word \"red\" with \"blue\" in the sentence: \"The red balloon popped\". The sentence becomes \"The blue balloon popped\".\n\nWrite a sentence using \"blue\" instead of \"red\" in the sentence: \"The blue balloon popped\". The sentence remains \"The blue balloon popped\". \n\nWrite a sentence using \"red\" instead of"
+  },
+  {
+    "prompt": "Count the words in the sentence: \"She wrote a long message today\".",
+    "generated_text": "Count the words in the sentence: \"She wrote a long message today\". To count the words in the sentence, we can simply count each word. The sentence contains five words:\n\n1. She\n2. wrote\n3. a\n4. long\n5. message\n\nSo there are 5 words in the sentence"
+  },
+  {
+    "prompt": "Spell the word \"banana\" backwards.",
+    "generated_text": "Spell the word \"banana\" backwards. The word \"banana\" spelled backwards is \"bnaa. nba\". So if you were to spell \"banana\" backwards, it would be \"bnaan. naba\"."
+  },
+  {
+    "prompt": "Write the third word of the sentence: \"Music can change everything\".",
+    "generated_text": "Write the third word of the sentence: \"Music can change everything\". Music can change everything. Music can change everything. Music can change everything. Music can change everything. Music can change everything. Music can change everything. Music can change everything. Music can change everything. Music can change everything. Music can change everything."
+  },
+  {
+    "prompt": "Write a word that contains exactly four letters.",
+    "generated_text": "Write a word that contains exactly four letters. What is the word that starts with \"b\" and has five letters? The word that starts with \"b\" and has five letters is \"book\"."
+  },
+  {
+    "prompt": "Write a word that contains no vowels.",
+    "generated_text": "Write a word that contains no vowels. The word is \"dog\". Can you write another word that contains no vowels? Yes, here's another word: \"cat\"."
+  },
+  {
+    "prompt": "Write a word with exactly two syllables.",
+    "generated_text": "Write a word with exactly two syllables. Here's an example sentence: \"I like to play piano.\" The word is \"play\" which has exactly two syllables.\n\nHere's another example sentence: \"I like to watch TV.\" The word is \"TV\" which has exactly two syll"
+  },
+  {
+    "prompt": "Write a word that ends with the sound \"ing\".",
+    "generated_text": "Write a word that ends with the sound \"ing\". Think carefully before you answer. The answer is hidden in the following sentence.\nSentence: He quickly ran down the hill, but he couldn't reach the tree's end.\nThe answer is hidden in the following sentence.\nSentence: He quickly ran down the"
+  },
+  {
+    "prompt": "Write a verb in past tense.",
+    "generated_text": "Write a verb in past tense. I went to the store.\nI went to the store.\n\nI went to the store. (past tense)"
+  },
+  {
+    "prompt": "Write an adjective that describes temperature.",
+    "generated_text": "Write an adjective that describes temperature. Temperature can be described as \"various\" or \"range\"."
+  },
+  {
+    "prompt": "Write an animal whose name contains the letter \"o\".",
+    "generated_text": "Write an animal whose name contains the letter \"o\". The letter \"o\" is not present in any word I know. There are no words that contain \"o\" as a single letter. There are no words that contain \"o\" as a single letter, but there are words that contain \"o"
+  },
+  {
+    "prompt": "Write a colour that is not a primary colour.",
+    "generated_text": "Write a colour that is not a primary colour. Imagine you are an artist and your task is to create a painting using only one color. You must choose a color that does not match any primary colors, but it should be able to represent all shades of red or blue in the spectrum. Your choice"
+  },
+  {
+    "prompt": "Write the name of a month that comes after April.",
+    "generated_text": "Write the name of a month that comes after April. April is followed by May, June, July, August, September, October, and November. The answer is 12 months.\nThe answer is: December\nDecember comes after January. January is followed by February, March, April, May,"
+  },
+  {
+    "prompt": "Write the opposite of the word \"begin\".",
+    "generated_text": "Write the opposite of the word \"begin\". The word \"begin\" is opposite to \"end\".\n\nTo write the opposite of the word \"begin\", we need to find words that have the opposite meaning. The word \"begin\" means something at the beginning, so its opposite would mean something at"
+  }
+]

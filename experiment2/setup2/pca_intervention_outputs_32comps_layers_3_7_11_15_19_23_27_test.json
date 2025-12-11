@@ -1,0 +1,102 @@
+[
+  {
+    "prompt": "Write a sentence that contains the word \"mountain\".",
+    "generated_text": "Write a sentence that contains the word \"mountain\". I went to visit the beautiful mountain, which offered me a view of the landscape.\n\nThe sentence you provided does not contain the word \"mount\" or any other words related to mountains. It is an example sentence without any relation to the given question about"
+  },
+  {
+    "prompt": "Write a sentence that does not contain the word \"blue\".",
+    "generated_text": "Write a sentence that does not contain the word \"blue\". The sky was blue and I felt happy today. Blue is often associated with calmness, so it might be easier to feel happy when you see blue."
+  },
+  {
+    "prompt": "Write a word that contains the letter \"q\".",
+    "generated_text": "Write a word that contains the letter \"q\". Here's an example: **quark**"
+  },
+  {
+    "prompt": "Write a word that does not contain the letter \"a\".",
+    "generated_text": "Write a word that does not contain the letter \"a\". Here are some words to start with: apple, elephant, bicycle. Now try starting with another word: airplane. Now try starting with another word: balloon. Now try starting with another word: pencil. Now try starting with another word: pen."
+  },
+  {
+    "prompt": "Write a sentence that starts with the word \"Yesterday\".",
+    "generated_text": "Write a sentence that starts with the word \"Yesterday\". Yesterday I went to school and saw my friends at the party."
+  },
+  {
+    "prompt": "Write a sentence that ends with the word \"soon\".",
+    "generated_text": "Write a sentence that ends with the word \"soon\". I plan to finish my project soon. I hope to finish my project soon. I plan to finish my project as soon as possible. I plan to finish my project before you do mine. I plan to finish my project right now. I plan to"
+  },
+  {
+    "prompt": "Write a sentence that contains exactly six words.",
+    "generated_text": "Write a sentence that contains exactly six words. The cat is purrfect."
+  },
+  {
+    "prompt": "Write a sentence that includes at least two verbs.",
+    "generated_text": "Write a sentence that includes at least two verbs. The sun danced over the clouds, making them look like a beautiful painting.\n\nSure! Here's a sentence that meets your requirements:\n\nThe sun danced over the clouds, making them look like a beautiful painting."
+  },
+  {
+    "prompt": "Write a sentence that uses the word \"green\" three times.",
+    "generated_text": "Write a sentence that uses the word \"green\" three times. The green grass was so bright and vibrant, it looked like it had been painted with paint from sun to green.\n\nThe green leaves were so lush and soft, they felt like softness could be found in nature's green world. Green is the color"
+  },
+  {
+    "prompt": "Write a word that starts and ends with a vowel.",
+    "generated_text": "Write a word that starts and ends with a vowel. The word should be used in the context of a sentence where it is not explicitly mentioned, but its presence is implied through the structure or content of the sentence.\n\nExample: \"The cat walked quickly down the stairs.\"\n\nIn this sentence, the word \""
+  },
+  {
+    "prompt": "Which number is bigger: 902 or 811?",
+    "generated_text": "Which number is bigger: 902 or 811? To determine which number is larger between 902 and 811, we can compare them step by step:\n\nFirst, let's look at the numbers:\n- The number 902 has two digits.\n- The number 8"
+  },
+  {
+    "prompt": "Which number is smaller: 144 or 198?",
+    "generated_text": "Which number is smaller: 144 or 198? To determine which number is smaller between 144 and 198, we can compare them step by step:\n\nFirst, let's look at the numbers:\n- 144\n- 198\n\nWe need to compare"
+  },
+  {
+    "prompt": "Which number is closer to 100: 87 or 120?",
+    "generated_text": "Which number is closer to 100: 87 or 120? To determine which number is closer to 100, we need to compare the two numbers, 87 and 120, by finding their absolute difference relative to 100.\n\nFirst, let's calculate the absolute difference between"
+  },
+  {
+    "prompt": "Which number is farthest from 50: 12, 40, or 99?",
+    "generated_text": "Which number is farthest from 50: 12, 40, or 99? To determine which number is farthest from 50, we need to calculate the absolute difference between each number and 50. Let's perform these calculations step by step:\n\nFirst, let's find the absolute difference between 12 and "
+  },
+  {
+    "prompt": "Is 58 an even number? Answer \"yes\" or \"no\".",
+    "generated_text": "Is 58 an even number? Answer \"yes\" or \"no\". Yes."
+  },
+  {
+    "prompt": "Is 73 an odd number? Answer \"yes\" or \"no\".",
+    "generated_text": "Is 73 an odd number? Answer \"yes\" or \"no\". Yes."
+  },
+  {
+    "prompt": "What is the sum of 14 and 23?",
+    "generated_text": "What is the sum of 14 and 23? To find the sum of 14 and 23, we need to add them together step by step.\n\nFirst, let's write down the numbers:\n\\[14\\ + 23\\ = \\ 14 + 23"
+  },
+  {
+    "prompt": "What is the difference between 90 and 55?",
+    "generated_text": "What is the difference between 90 and 55? To find the difference between 90 and 55, we need to subtract 55 from 90. Let's perform the subtraction step by step:\n\nStart with 90:\n\\[ 90 - 55 = "
+  },
+  {
+    "prompt": "Which number is divisible by 5: 42 or 45?",
+    "generated_text": "Which number is divisible by 5: 42 or 45? To determine which number among 42 and 45 is divisible by 5, we need to check the divisibility of each number individually.\n\nFirst, let's check the number 42:\n- The number 42 ends with a"
+  },
+  {
+    "prompt": "Which number contains more digits: 7 or 312?",
+    "generated_text": "Which number contains more digits: 7 or 312? To determine which number contains more digits, we need to compare the number 7 with the number 312. Let's break down each number step by step:\n\nFirst, let's count the number of digits in 7:\n- The number"
+  },
+  {
+    "prompt": "Which word has more letters: \"winter\" or \"heat\"?",
+    "generated_text": "Which word has more letters: \"winter\" or \"heat\"? To determine which word has more letters, we need to compare the number of letters in each word.\n\nFirst, let's count the number of letters in the word \"winter\":\n- The word \"winter\" consists of 7 letters.\nNext, let"
+  },
+  {
+    "prompt": "Which word comes first alphabetically: \"glass\" or \"glove\"?",
+    "generated_text": "Which word comes first alphabetically: \"glass\" or \"glove\"? To determine which word comes first alphabetically among \"glass\" and \"glove,\" we need to compare the letters in each word step by step.\n\nLet's start with the letter 'g':\n- The word \"glass\" starts with the letter"
+  },
+  {
+    "prompt": "Which word rhymes with \"chair\": \"bear\" or \"child\"?",
+    "generated_text": "Which word rhymes with \"chair\": \"bear\" or \"child\"? To determine which word rhymes with \"chair,\" we need to compare the words \"bear\" and \"child\" with \"chair.\"\n\nLet's analyze each word:\n\n- \"Bear\" rhymes with \"baw\" (rh: \"baw"
+  },
+  {
+    "prompt": "Write a word that contains exactly five letters.",
+    "generated_text": "Write a word that contains exactly five letters. The word must start with \"cat\" and end with \"t\". Additionally, the word should contain at least one letter that is not present in the word \"cat\". Please provide an example word that meets these criteria.\nExample word: \"cats"
+  },
+  {
+    "prompt": "Write the opposite of the word \"finish\".",
+    "generated_text": "Write the opposite of the word \"finish\". The word \"finish\" is opposite to \"begin\".\n\nTo write the opposite of the word \"finish\", we need to consider the meaning of \"finish\" and its opposite. The word \"finish\" means the end of something, or the completion of"
+  }
+]

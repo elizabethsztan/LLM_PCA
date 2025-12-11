@@ -1,6 +1,5 @@
 __pycache__
-experiment_results
-experiment2
-experiment3
 SR_output
 CALLABLE_QUICKSTART.md
+*.pkl
+*.pt
