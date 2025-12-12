@@ -25,7 +25,7 @@ with open('harry_potter.json', 'r') as f:
 
 #SETUP THE EXPERIMENT
 base_experiment_folder = "experiment2"
-results_location = "experiment2/setup4"
+results_location = "experiment2/setup5"
 os.makedirs(base_experiment_folder, exist_ok=True)
 os.makedirs(results_location, exist_ok=True)
 
@@ -33,7 +33,7 @@ os.makedirs(results_location, exist_ok=True)
 layers = [3, 7, 11, 15, 19, 23, 27]
 
 #how many pca comps to use
-pca_comps = 16
+pca_comps = 64
 
 
 #create storage for MLP I/O
