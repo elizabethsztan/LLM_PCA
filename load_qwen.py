@@ -22,7 +22,7 @@ def load_qwen_model(device="mps"):
 
     # Configure loading options for Mac
     model_kwargs = {
-        "torch_dtype": torch.float16 if device == "mps" else torch.float32,
+        "dtype": torch.float16 if device == "mps" else torch.float32,
     }
 
     model = AutoModelForCausalLM.from_pretrained(
