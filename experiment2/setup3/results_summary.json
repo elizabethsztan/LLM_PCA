@@ -1,0 +1,10 @@
+{
+  "baseline_perplexity": 10.07398453497229,
+  "pca_intervention_perplexity": 12.822908420371624,
+  "pca_components": 16,
+  "layers_intervened": [
+    19
+  ],
+  "perplexity_change": 2.748923885399334,
+  "perplexity_ratio": 1.2728735462970309
+}
