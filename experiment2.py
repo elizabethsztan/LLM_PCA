@@ -5,6 +5,7 @@ from sklearn.decomposition import PCA
 import numpy as np
 import pickle
 import os
+import math
 
 from load_qwen import load_qwen_model
 
@@ -18,16 +19,21 @@ with open('train_prompts.json', 'r') as f:
 with open('test_prompts.json', 'r') as f:
     test_prompts = json.load(f)
 
+with open('harry_potter.json', 'r') as f:
+    perplexity_text = json.load(f)
+
 
 #SETUP THE EXPERIMENT
-results_location = "experiment2/setup2"
+results_location = "experiment2/setup3"
 os.makedirs(results_location, exist_ok=True)
 
 #which mlp layers to mess with
-layers = [3, 7, 11, 15, 19, 23, 27]
+# layers = [3, 7, 11, 15, 19, 23, 27]
+
+layers = [19]
 
 #how many pca comps to use
-pca_comps = 32
+pca_comps = 16
 
 
 #create storage for MLP I/O
@@ -137,6 +143,40 @@ else:
         print(f"Layer {layer} - Inputs: {inputs_tensor.shape}, Outputs: {outputs_tensor.shape}")
 
     torch.save(activations_to_save, f'{results_location}/mlp_activations.pt')
+
+# Run the test for baseline perplexity
+path_perp = f"{results_location}/baseline_perplexity.json"
+
+
+if os.path.exists(path_perp):
+    print("Not running baseline perplexity test - we already have the data we need")
+    with open(path_perp, 'r') as f:
+        baseline_perp_data = json.load(f)
+        perplexity = baseline_perp_data['perplexity']
+else:
+    inputs = tokenizer(perplexity_text, return_tensors="pt").to(model.device)
+
+    with torch.no_grad():
+        outputs = model(
+            **inputs,
+            labels=inputs['input_ids']
+        )
+
+        # Get the average negative log-likelihood per token
+        nll = outputs.loss.item()
+
+    # Perplexity = exp(NLL)
+    perplexity = math.exp(nll)
+
+    # Save baseline perplexity
+    baseline_perp_data = {
+        'perplexity': perplexity,
+        'nll': nll
+    }
+    with open(path_perp, 'w') as f:
+        json.dump(baseline_perp_data, f, indent=2)
+    print(f"Saved baseline perplexity: {perplexity:.4f}")
+
 
 #Fit the PCA model if we haven't done it already
 
@@ -257,6 +297,22 @@ for prompt in test_prompts:
         'generated_text': generated_text_pca_test
     })
 
+# Test perplexity of harry potter text with PCA intervention
+inputs = tokenizer(perplexity_text, return_tensors="pt").to(model.device)
+
+with torch.no_grad():
+    outputs = model(
+        **inputs,
+        labels=inputs['input_ids'],
+        use_cache=False
+    )
+
+    # Get the average negative log-likelihood per token
+    nll_pca = outputs.loss.item()
+
+# Perplexity = exp(NLL)
+perplexity_pca = math.exp(nll_pca)
+
 # Remove all intervention hooks when done
 for handle in intervention_handles:
     handle.remove()
@@ -274,3 +330,26 @@ with open(output_filename_test, 'w') as f:
     json.dump(generated_texts_pca_test, f, indent=2)
 
 print(f"Saved {len(generated_texts_pca_test)} PCA intervention outputs (test set) to {output_filename_test}")
+
+# Save results summary
+results_summary = {
+    'baseline_perplexity': perplexity,
+    'pca_intervention_perplexity': perplexity_pca,
+    'pca_components': pca_comps,
+    'layers_intervened': layers,
+    'perplexity_change': perplexity_pca - perplexity,
+    'perplexity_ratio': perplexity_pca / perplexity
+}
+
+results_filename = f'{results_location}/results_summary.json'
+with open(results_filename, 'w') as f:
+    json.dump(results_summary, f, indent=2)
+
+print(f"\nResults Summary:")
+print(f"  Baseline Perplexity: {perplexity:.4f}")
+print(f"  PCA Intervention Perplexity: {perplexity_pca:.4f}")
+print(f"  Perplexity Change: {perplexity_pca - perplexity:.4f}")
+print(f"  Perplexity Ratio: {perplexity_pca / perplexity:.4f}")
+print(f"  PCA Components: {pca_comps}")
+print(f"  Layers: {layers}")
+print(f"\nSaved results summary to {results_filename}")
