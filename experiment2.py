@@ -23,17 +23,17 @@ with open('harry_potter.json', 'r') as f:
     perplexity_text = json.load(f)
 
 
-#SETUP THE EXPERIMENT
-base_experiment_folder = "experiment2"
-results_location = "experiment2/setup5"
-os.makedirs(base_experiment_folder, exist_ok=True)
-os.makedirs(results_location, exist_ok=True)
-
 #which mlp layers to mess with
-layers = [3, 7, 11, 15, 19, 23, 27]
+layers = [7, 14, 21]
 
 #how many pca comps to use
-pca_comps = 64
+pca_comps = 256
+
+#SETUP THE EXPERIMENT
+base_experiment_folder = "experiment2_3layers"
+results_location = f"experiment2_3layers/pca_comps{pca_comps}"
+os.makedirs(base_experiment_folder, exist_ok=True)
+os.makedirs(results_location, exist_ok=True)
 
 
 #create storage for MLP I/O
@@ -332,13 +332,22 @@ with open(output_filename_test, 'w') as f:
 print(f"Saved {len(generated_texts_pca_test)} PCA intervention outputs (test set) to {output_filename_test}")
 
 # Save results summary
+# Collect explained variance ratios for each layer
+explained_variance_by_layer = {}
+for layer in layers:
+    explained_variance_by_layer[f'layer_{layer}'] = {
+        'explained_variance_ratio_sum': float(pca_models[layer].explained_variance_ratio_.sum()),
+        'explained_variance_ratio_per_component': pca_models[layer].explained_variance_ratio_.tolist()
+    }
+
 results_summary = {
     'baseline_perplexity': perplexity,
     'pca_intervention_perplexity': perplexity_pca,
     'pca_components': pca_comps,
     'layers_intervened': layers,
     'perplexity_change': perplexity_pca - perplexity,
-    'perplexity_ratio': perplexity_pca / perplexity
+    'perplexity_ratio': perplexity_pca / perplexity,
+    'explained_variance': explained_variance_by_layer
 }
 
 results_filename = f'{results_location}/results_summary.json'
@@ -352,4 +361,8 @@ print(f"  Perplexity Change: {perplexity_pca - perplexity:.4f}")
 print(f"  Perplexity Ratio: {perplexity_pca / perplexity:.4f}")
 print(f"  PCA Components: {pca_comps}")
 print(f"  Layers: {layers}")
+print(f"\n  Explained Variance by Layer:")
+for layer in layers:
+    var_ratio = explained_variance_by_layer[f'layer_{layer}']['explained_variance_ratio_sum']
+    print(f"    Layer {layer}: {var_ratio:.4f} ({var_ratio*100:.2f}%)")
 print(f"\nSaved results summary to {results_filename}")
