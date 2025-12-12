@@ -24,13 +24,13 @@ with open('harry_potter.json', 'r') as f:
 
 
 #SETUP THE EXPERIMENT
-results_location = "experiment2/setup3"
+base_experiment_folder = "experiment2"
+results_location = "experiment2/setup4"
+os.makedirs(base_experiment_folder, exist_ok=True)
 os.makedirs(results_location, exist_ok=True)
 
 #which mlp layers to mess with
-# layers = [3, 7, 11, 15, 19, 23, 27]
-
-layers = [19]
+layers = [3, 7, 11, 15, 19, 23, 27]
 
 #how many pca comps to use
 pca_comps = 16
@@ -49,11 +49,11 @@ def make_mlp_hook(layer_num):
     return mlp_hook
 
 # Only run below code if we don't have the information already
-path = f"{results_location}/mlp_activations.pt"
+# Store baseline data in the base experiment folder (shared across all setups)
+path = f"{base_experiment_folder}/mlp_activations.pt"
 
 if os.path.exists(path):
     print("Not running baseline - we already have the data we need")
-    data = torch.load(path)
 else:
     print("Running baseline and collecting activations")
 
@@ -95,11 +95,11 @@ else:
         handle.remove()
 
 
-    # Save generated texts to JSON file
-    with open(f'{results_location}/baseline_outputs.json', 'w') as f:
+    # Save generated texts to JSON file in base experiment folder
+    with open(f'{base_experiment_folder}/baseline_outputs.json', 'w') as f:
         json.dump(generated_texts, f, indent=2)
 
-    print(f"Saved {len(generated_texts)} baseline outputs to baseline_outputs.json")
+    print(f"Saved {len(generated_texts)} baseline outputs to {base_experiment_folder}/baseline_outputs.json")
 
     generated_texts_test = []
     #run a baseline test for the test prompts too
@@ -122,11 +122,11 @@ else:
             'generated_text': generated_text_test
         })
 
-            # Save generated texts to JSON file
-    with open(f'{results_location}/test_baseline_outputs.json', 'w') as f:
+    # Save generated texts to JSON file in base experiment folder
+    with open(f'{base_experiment_folder}/test_baseline_outputs.json', 'w') as f:
         json.dump(generated_texts_test, f, indent=2)
 
-    print(f"Saved {len(generated_texts_test)} test baseline outputs to test_baseline_outputs.json")
+    print(f"Saved {len(generated_texts_test)} test baseline outputs to {base_experiment_folder}/test_baseline_outputs.json")
 
 
     # Save activations for each layer separately
@@ -142,11 +142,11 @@ else:
         }
         print(f"Layer {layer} - Inputs: {inputs_tensor.shape}, Outputs: {outputs_tensor.shape}")
 
-    torch.save(activations_to_save, f'{results_location}/mlp_activations.pt')
+    torch.save(activations_to_save, f'{base_experiment_folder}/mlp_activations.pt')
 
 # Run the test for baseline perplexity
-path_perp = f"{results_location}/baseline_perplexity.json"
-
+# Store in base experiment folder (shared across all setups)
+path_perp = f"{base_experiment_folder}/baseline_perplexity.json"
 
 if os.path.exists(path_perp):
     print("Not running baseline perplexity test - we already have the data we need")
@@ -168,7 +168,7 @@ else:
     # Perplexity = exp(NLL)
     perplexity = math.exp(nll)
 
-    # Save baseline perplexity
+    # Save baseline perplexity in base experiment folder
     baseline_perp_data = {
         'perplexity': perplexity,
         'nll': nll
@@ -180,8 +180,8 @@ else:
 
 #Fit the PCA model if we haven't done it already
 
-# Load the saved activations
-data = torch.load(f"{results_location}/mlp_activations.pt")
+# Load the saved activations from base experiment folder
+data = torch.load(f"{base_experiment_folder}/mlp_activations.pt")
 
 # Dictionary to store PCA models for each layer
 pca_models = {}

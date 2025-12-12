@@ -1,0 +1,102 @@
+[
+  {
+    "prompt": "Write a sentence that contains the word \"mountain\".",
+    "generated_text": "Write a sentence that contains the word \"mountain\". The majestic mountain stood tall in the distance, its snow-capped peak piercing through the clouds. To add more complexity to your prompt, you could ask for an example of how this sentence can be used in a story or poem. For instance, it"
+  },
+  {
+    "prompt": "Write a sentence that does not contain the word \"blue\".",
+    "generated_text": "Write a sentence that does not contain the word \"blue\". The sky was filled with fluffy white clouds."
+  },
+  {
+    "prompt": "Write a word that contains the letter \"q\".",
+    "generated_text": "Write a word that contains the letter \"q\". Quill. \n\nA quill is a writing instrument made from the feather of an owl or other bird, typically used for writing or drawing. It has been used by humans since ancient times and continues to be popular today as a tool for creative expression"
+  },
+  {
+    "prompt": "Write a word that does not contain the letter \"a\".",
+    "generated_text": "Write a word that does not contain the letter \"a\". The word should be at least 10 letters long and start with the letter \"p\".\n\nOne possible answer is \"plastic.\" However, if you want to make it more challenging, you can also consider words like \"pencil,\" \"pipe"
+  },
+  {
+    "prompt": "Write a sentence that starts with the word \"Yesterday\".",
+    "generated_text": "Write a sentence that starts with the word \"Yesterday\". Yesterday, I went to the park and played on the swings. \n\nThis is an example of how to start a sentence with the word \"Yesterday\" in English. The sentence describes an action that was performed on a previous day, specifically yesterday. It"
+  },
+  {
+    "prompt": "Write a sentence that ends with the word \"soon\".",
+    "generated_text": "Write a sentence that ends with the word \"soon\". I'm going to start my new job soon, so I'll have more time for hobbies. \n\nThe sentence you provided is grammatically correct and conveys a clear meaning. It begins with an introductory phrase (\"I'm going to\"), which is followed"
+  },
+  {
+    "prompt": "Write a sentence that contains exactly six words.",
+    "generated_text": "Write a sentence that contains exactly six words. The quick brown fox jumps over the lazy dog. \n\nThis is an example of a pangram, which is a sentence containing every letter of the alphabet at least once. In this case, it includes all 26 letters of the English alphabet."
+  },
+  {
+    "prompt": "Write a sentence that includes at least two verbs.",
+    "generated_text": "Write a sentence that includes at least two verbs. I am going to the store and then I will buy some groceries.\n\nI am going to the store, and then I will buy some groceries. \n\nIn this sentence, \"going\" is an infinitive verb used as a noun, while \"buy"
+  },
+  {
+    "prompt": "Write a sentence that uses the word \"green\" three times.",
+    "generated_text": "Write a sentence that uses the word \"green\" three times. The trees in my backyard are so green, they make me feel like I'm walking through a lush forest.\n\nI have always been fascinated by the color green and how it can bring life to any environment. In nature, green is often associated with growth"
+  },
+  {
+    "prompt": "Write a word that starts and ends with a vowel.",
+    "generated_text": "Write a word that starts and ends with a vowel. The word should have at least 10 letters and be related to the concept of time or chronology.\n\nThe word is: **Chronosaurus**.\n\nThis term combines \"chronos,\" meaning time, with \"saurus,\" which refers to"
+  },
+  {
+    "prompt": "Which number is bigger: 902 or 811?",
+    "generated_text": "Which number is bigger: 902 or 811? To determine which number is larger between 902 and 811, we can compare them step by step.\n\nFirst, let's look at the digits in each number:\n- The number 902 has the digits 9,"
+  },
+  {
+    "prompt": "Which number is smaller: 144 or 198?",
+    "generated_text": "Which number is smaller: 144 or 198? To determine which of the numbers 144 and 198 is smaller, we can compare them step by step.\n\nFirst, let's look at the digits in each number:\n- The number 144 has the digits 1"
+  },
+  {
+    "prompt": "Which number is closer to 100: 87 or 120?",
+    "generated_text": "Which number is closer to 100: 87 or 120? To determine which number is closer to 100, we need to calculate the absolute difference between each number and 100. The smaller of these differences will be the closest number to 100.\n\nFirst, let's find the"
+  },
+  {
+    "prompt": "Which number is farthest from 50: 12, 40, or 99?",
+    "generated_text": "Which number is farthest from 50: 12, 40, or 99? To determine which number is farthest from 50 among the given options (12, 40, and 99), we need to calculate the absolute difference between each of these numbers and 50. The absolute difference will give"
+  },
+  {
+    "prompt": "Is 58 an even number? Answer \"yes\" or \"no\".",
+    "generated_text": "Is 58 an even number? Answer \"yes\" or \"no\". Yes. An even number is any integer that can be divided by 2 without leaving a remainder. Since 58 divided by 2 equals 29, which is an integer, we can conclude that 58 is indeed an even number"
+  },
+  {
+    "prompt": "Is 73 an odd number? Answer \"yes\" or \"no\".",
+    "generated_text": "Is 73 an odd number? Answer \"yes\" or \"no\". Yes, 73 is an odd number. An odd number is any integer that cannot be divided by two without leaving a remainder. Since 73 can only be divided by itself and one (1), it leaves a remainder of 1 when"
+  },
+  {
+    "prompt": "What is the sum of 14 and 23?",
+    "generated_text": "What is the sum of 14 and 23? To find the sum of 14 and 23, we can follow these steps:\n\n1. Start with the number 14.\n2. Add the number 23 to it.\n\nWe can break this addition into simpler parts:\n-"
+  },
+  {
+    "prompt": "What is the difference between 90 and 55?",
+    "generated_text": "What is the difference between 90 and 55? To find the difference between 90 and 55, we need to subtract 55 from 90. Here are the steps:\n\n1. Write down the numbers in a vertical format for easy subtraction:\n   \\[\n   \\begin"
+  },
+  {
+    "prompt": "Which number is divisible by 5: 42 or 45?",
+    "generated_text": "Which number is divisible by 5: 42 or 45? To determine which of the numbers 42 and 45 is divisible by 5, we need to check if each number ends in a digit that corresponds to divisibility by 5. A number is divisible by 5 if its last digit"
+  },
+  {
+    "prompt": "Which number contains more digits: 7 or 312?",
+    "generated_text": "Which number contains more digits: 7 or 312? To determine which number contains more digits, we need to compare the numbers 7 and 312. Let's break it down step by step.\n\n1. **Identify the number of digits in each number:**\n   - The number "
+  },
+  {
+    "prompt": "Which word has more letters: \"winter\" or \"heat\"?",
+    "generated_text": "Which word has more letters: \"winter\" or \"heat\"? To determine which word has more letters, we need to count the number of letters in each word.\n\nFirst, let's count the letters in \"winter\":\n- The word \"winter\" consists of 6 letters.\n- These letters are: w-i"
+  },
+  {
+    "prompt": "Which word comes first alphabetically: \"glass\" or \"glove\"?",
+    "generated_text": "Which word comes first alphabetically: \"glass\" or \"glove\"? To determine which word comes first alphabetically between \"glass\" and \"glove,\" we need to compare the letters in each word from left to right.\n\n1. Start with the first letter of each word:\n   - The first letter of \"glass"
+  },
+  {
+    "prompt": "Which word rhymes with \"chair\": \"bear\" or \"child\"?",
+    "generated_text": "Which word rhymes with \"chair\": \"bear\" or \"child\"? The word that rhymes with \"chair\" is \"bear\". Both words end in the same sound, which makes them rhyme. The other option, \"child,\" does not rhyme with \"chair.\" It ends in a different sound and would not match"
+  },
+  {
+    "prompt": "Write a word that contains exactly five letters.",
+    "generated_text": "Write a word that contains exactly five letters. The word must be the name of an animal, and it should start with the letter \"t\". Additionally, the animal must be found in both North America and South America.\nThe word is **Toucan**. Toucans are known for"
+  },
+  {
+    "prompt": "Write the opposite of the word \"finish\".",
+    "generated_text": "Write the opposite of the word \"finish\". The opposite of the word \"finish\" is \"begin.\""
+  }
+]
