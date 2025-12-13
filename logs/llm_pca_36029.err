@@ -1,0 +1,37 @@
+Traceback (most recent call last):
+  File "/cephfs/store/gr-mc2473/eszt2/venv/lib/python3.10/site-packages/transformers/modeling_utils.py", line 1037, in _get_resolved_checkpoint_files
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/cephfs/store/gr-mc2473/eszt2/venv/lib/python3.10/site-packages/transformers/utils/hub.py", line 322, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "/cephfs/store/gr-mc2473/eszt2/venv/lib/python3.10/site-packages/transformers/utils/hub.py", line 567, in cached_files
+    raise e
+  File "/cephfs/store/gr-mc2473/eszt2/venv/lib/python3.10/site-packages/transformers/utils/hub.py", line 479, in cached_files
+    hf_hub_download(
+  File "/cephfs/store/gr-mc2473/eszt2/venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/cephfs/store/gr-mc2473/eszt2/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1007, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/cephfs/store/gr-mc2473/eszt2/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1168, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "/cephfs/store/gr-mc2473/eszt2/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1720, in _download_to_tmp_and_move
+    xet_get(
+  File "/cephfs/store/gr-mc2473/eszt2/venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 626, in xet_get
+    download_files(
+RuntimeError: Data processing error: CAS service error : IO Error: Disk quota exceeded (os error 122)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/cephfs/store/gr-mc2473/eszt2/LLM_PCA_project/LLM_PCA/experiment4.py", line 30, in <module>
+    model, tokenizer = load_qwen_model()
+  File "/cephfs/store/gr-mc2473/eszt2/LLM_PCA_project/LLM_PCA/load_qwen.py", line 28, in load_qwen_model
+    model = AutoModelForCausalLM.from_pretrained(
+  File "/cephfs/store/gr-mc2473/eszt2/venv/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 604, in from_pretrained
+    return model_class.from_pretrained(
+  File "/cephfs/store/gr-mc2473/eszt2/venv/lib/python3.10/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/cephfs/store/gr-mc2473/eszt2/venv/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/cephfs/store/gr-mc2473/eszt2/venv/lib/python3.10/site-packages/transformers/modeling_utils.py", line 1160, in _get_resolved_checkpoint_files
+    raise OSError(
+OSError: Can't load the model for 'Qwen/Qwen2.5-1.5B-Instruct'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure 'Qwen/Qwen2.5-1.5B-Instruct' is the correct path to a directory containing a file named pytorch_model.bin, tf_model.h5, model.ckpt or flax_model.msgpack.
