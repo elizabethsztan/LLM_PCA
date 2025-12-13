@@ -6,9 +6,25 @@ import numpy as np
 import pickle
 import os
 import math
+import time
+import random
+import argparse
 
 from load_qwen import load_qwen_model
 from datasets import load_dataset
+
+# Parse command-line arguments
+parser = argparse.ArgumentParser(description='Run Experiment 4: PCA intervention on MLP layers')
+parser.add_argument('pca_comps_I', type=int,
+                    help='Number of PCA components for input')
+parser.add_argument('pca_comps_O', type=int,
+                    help='Number of PCA components for output')
+parser.add_argument('--max-chars', type=int, default=None,
+                    help='Optional: Maximum characters to use from dataset (default: use full dataset)')
+args = parser.parse_args()
+
+# Start timing
+start_time = time.time()
 
 #load the model
 model, tokenizer = load_qwen_model()
@@ -21,22 +37,41 @@ train_text = "\n".join([t for t in train_data if t.strip()])
 val_data = wikitext["validation"]["text"]
 val_text = "\n".join([t for t in val_data if t.strip()])
 
-# OPTIONAL: Truncate data for faster testing (comment out for full experiment)
-MAX_CHARS = 50000  # Adjust this to control dataset size
-train_text = train_text[:MAX_CHARS]
-val_text = val_text[:MAX_CHARS]
+# OPTIONAL: Truncate data for faster testing (set to None for full experiment)
+MAX_CHARS = args.max_chars
+
+if MAX_CHARS is not None:
+    # Use random sampling for better representation
+    random.seed(290402)  # For reproducibility
+
+    def sample_text_random(text, max_chars):
+        if len(text) <= max_chars:
+            return text
+        # Random starting position
+        max_start = len(text) - max_chars
+        start_pos = random.randint(0, max_start)
+        return text[start_pos:start_pos + max_chars]
+
+    train_text = sample_text_random(train_text, MAX_CHARS)
+    val_text = sample_text_random(val_text, MAX_CHARS)
 
 #which mlp layers to mess with
 layers = [7, 14, 21]
 
 #how many pca comps to use for I/O
-pca_comps_I = 8
-pca_comps_O = 256
+pca_comps_I = args.pca_comps_I
+pca_comps_O = args.pca_comps_O
 
 #SETUP THE EXPERIMENT
 base_experiment_folder = "experiment4_testing"
 
-results_location = f"{base_experiment_folder}/layers_{"_".join(str(x) for x in layers)}/pca_comps_I{pca_comps_I}_O{pca_comps_O}"
+if MAX_CHARS:
+    results_location = f"{base_experiment_folder}/layers_{"_".join(str(x) for x in layers)}/max_chars{MAX_CHARS}/pca_comps_I{pca_comps_I}_O{pca_comps_O}"
+
+else:
+    results_location = f"{base_experiment_folder}/layers_{"_".join(str(x) for x in layers)}/pca_comps_I{pca_comps_I}_O{pca_comps_O}"
+
+
 os.makedirs(base_experiment_folder, exist_ok=True)
 os.makedirs(results_location, exist_ok=True)
 
@@ -61,7 +96,11 @@ def make_mlp_hook(layer_num):
 
 # Only run below code if we don't have the information already
 # Store baseline data in the base experiment folder (shared across all setups)
-path = f"{base_experiment_folder}/layers_{"_".join(str(x) for x in layers)}/mlp_activations.pt"
+if MAX_CHARS:
+    path = f"{base_experiment_folder}/layers_{"_".join(str(x) for x in layers)}/max_chars{MAX_CHARS}/mlp_activations.pt"
+else:
+    path = f"{base_experiment_folder}/layers_{"_".join(str(x) for x in layers)}/mlp_activations.pt"
+
 
 def get_perplexity(model, tokenizer, text, experimental_results, max_length = 1024, dataset_name = "train"):
     # Tokenize the full training text
@@ -282,6 +321,9 @@ experimental_results["intervened_perplexity_val"]=get_perplexity(model, tokenize
 for handle in intervention_handles:
     handle.remove()
 
+# Add runtime to results
+experimental_results["total_runtime_minutes"] = (time.time() - start_time)/60
+
 # Save experimental results
 results_file = f'{results_location}/experimental_results.json'
 with open(results_file, 'w') as f:
@@ -304,4 +346,13 @@ print(f"\nPerplexity Change:")
 print(f"  Train: {experimental_results['intervened_perplexity_train'] - experimental_results['baseline_perplexity_train']:.4f}")
 print(f"  Val:   {experimental_results['intervened_perplexity_val'] - experimental_results['baseline_perplexity_val']:.4f}")
 print(f"\nResults saved to: {results_file}")
+
+# Calculate and display total runtime
+end_time = time.time()
+total_time = end_time - start_time
+hours = int(total_time // 3600)
+minutes = int((total_time % 3600) // 60)
+seconds = total_time % 60
+
+print(f"\nTotal Runtime: {hours}h {minutes}m {seconds:.2f}s")
 print(f"{'='*60}")
