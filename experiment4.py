@@ -1,10 +1,18 @@
+import os
+# Set HuggingFace cache directory to cephfs when on HPC to avoid quota issues
+# MUST be done before importing transformers
+if os.path.exists('/cephfs/store/gr-mc2473/eszt2'):
+    os.environ['HF_HOME'] = '/cephfs/store/gr-mc2473/eszt2/hf_cache'
+    os.environ['TRANSFORMERS_CACHE'] = '/cephfs/store/gr-mc2473/eszt2/hf_cache'
+    os.environ['HF_DATASETS_CACHE'] = '/cephfs/store/gr-mc2473/eszt2/hf_cache/datasets'
+    print("Running on HPC - using cephfs cache directory")
+
 import torch
 import json
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from sklearn.decomposition import PCA
 import numpy as np
 import pickle
-import os
 import math
 import time
 import random
