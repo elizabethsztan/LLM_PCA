@@ -2,8 +2,17 @@
 Script to load and interact with Qwen2.5-1.5B-Instruct model
 """
 
+import os
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
+
+# Set HuggingFace cache directory to cephfs when on HPC to avoid quota issues
+# Check if we're on the HPC by looking for the cephfs directory
+if os.path.exists('/cephfs/store/gr-mc2473/eszt2'):
+    os.environ['HF_HOME'] = '/cephfs/store/gr-mc2473/eszt2/hf_cache'
+    os.environ['TRANSFORMERS_CACHE'] = '/cephfs/store/gr-mc2473/eszt2/hf_cache'
+    os.environ['HF_DATASETS_CACHE'] = '/cephfs/store/gr-mc2473/eszt2/hf_cache/datasets'
+    print("Running on HPC - using cephfs cache directory")
 
 def load_qwen_model(device="mps"):
     """
