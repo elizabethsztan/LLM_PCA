@@ -65,11 +65,13 @@ pca_comps_O = args.pca_comps_O
 #SETUP THE EXPERIMENT
 base_experiment_folder = "experiment4_testing"
 
+layers_str = "_".join(str(x) for x in layers)
+
 if MAX_CHARS:
-    results_location = f"{base_experiment_folder}/layers_{"_".join(str(x) for x in layers)}/max_chars{MAX_CHARS}/pca_comps_I{pca_comps_I}_O{pca_comps_O}"
+    results_location = f"{base_experiment_folder}/layers_{layers_str}/max_chars{MAX_CHARS}/pca_comps_I{pca_comps_I}_O{pca_comps_O}"
 
 else:
-    results_location = f"{base_experiment_folder}/layers_{"_".join(str(x) for x in layers)}/pca_comps_I{pca_comps_I}_O{pca_comps_O}"
+    results_location = f"{base_experiment_folder}/layers_{layers_str}/pca_comps_I{pca_comps_I}_O{pca_comps_O}"
 
 
 os.makedirs(base_experiment_folder, exist_ok=True)
@@ -97,9 +99,9 @@ def make_mlp_hook(layer_num):
 # Only run below code if we don't have the information already
 # Store baseline data in the base experiment folder (shared across all setups)
 if MAX_CHARS:
-    path = f"{base_experiment_folder}/layers_{"_".join(str(x) for x in layers)}/max_chars{MAX_CHARS}/mlp_activations.pt"
+    path = f"{base_experiment_folder}/layers_{layers_str}/max_chars{MAX_CHARS}/mlp_activations.pt"
 else:
-    path = f"{base_experiment_folder}/layers_{"_".join(str(x) for x in layers)}/mlp_activations.pt"
+    path = f"{base_experiment_folder}/layers_{layers_str}/mlp_activations.pt"
 
 
 def get_perplexity(model, tokenizer, text, experimental_results, max_length = 1024, dataset_name = "train"):
@@ -174,12 +176,12 @@ else:
         }
         print(f"Layer {layer} - Inputs: {inputs_tensor.shape}, Outputs: {outputs_tensor.shape}")
 
-    torch.save(activations_to_save, f'{base_experiment_folder}/layers_{"_".join(str(x) for x in layers)}/mlp_activations.pt')
+    torch.save(activations_to_save, f'{base_experiment_folder}/layers_{layers_str}/mlp_activations.pt')
 
 #Fit the PCA model if we haven't done it already
 
 # Load the saved activations from base experiment folder
-data = torch.load(f"{base_experiment_folder}/layers_{"_".join(str(x) for x in layers)}/mlp_activations.pt")
+data = torch.load(f"{base_experiment_folder}/layers_{layers_str}/mlp_activations.pt")
 
 # Dictionary to store PCA models for each layer
 pca_models = {}
